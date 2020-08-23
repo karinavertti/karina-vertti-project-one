@@ -61,7 +61,6 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     font-weight: normal;
-    width: 33%;
     line-height: 1;
     margin: 0 auto;
     padding-top: 150px;
@@ -72,18 +71,27 @@ h1 {
     text-align: center;
 }
 
+
 h2 {
-    background-color: #9200FF;
     color: #FFF;
     font-weight: normal;
-    width: 38%;
     margin: 0 auto; 
     padding: 10px;
-
 }
+
+span {
+    background-color: #9200FF;
+    padding: 10px 20px;
+}
+
+
 /*********************/
 /* navigation styles */
 /*********************/
+
+.menuBar i {
+    display: none;
+}
 
 .menuBar {
     text-align: center;
@@ -95,6 +103,10 @@ h2 {
     display: inline-block;
     text-transform: uppercase;
     padding-left: 25px;
+}
+
+.menuBar li:first-child {
+    padding-left: 0;
 }
 
 .social {
@@ -113,19 +125,17 @@ a {
     color: #FFF;
 }
 
-a:hover {
-    font-weight: bold;
-}
-
+a:hover,
 a:focus {
     font-weight: bold;
 }
 
-/*********************/
+/***********************************/
 /* performing & experiences styles */
-/*********************/
+/***********************************/
 
-.performing {
+.performing, 
+.experiences {
     background-color: #0F0632;
 }
 
@@ -134,10 +144,12 @@ h3, h4 {
     font-weight: normal;
     font-size: 4.8rem;
     text-transform: uppercase;
+    line-height: 1;
+    padding-bottom: 10px;
 }
 
-.read,
-.cta {
+.read {
+    cursor: pointer;
     border-style: none;
     background-color: #9200FF;
     color: #FFF;
@@ -147,31 +159,46 @@ h3, h4 {
     padding: 10px 20px;
 }
 
+.performingInfo p,
+.expInfo p {
+    padding-bottom: 30px;
+}
+
 .performingInfo {
     width: 50%;
+    height: 35vw;
     float: left;
     padding: 100px 70px;
 }
 
-.performingInfo p {
-    padding-bottom: 30px;
+.performingImg img {
+    width: 50%;
+    height: 35vw;
+    float: right;
 }
 
-.performingImg {
+.expInfo {
     width: 50%;
+    height: 35vw;
+    float: left;
+    padding: 100px 70px;
+}
+
+.expImg img {
+    width: 50%;
+    height: 35vw;
     float: left;
 }
-
 
 /*********************/
 /* tickets styles */
 /*********************/
 .tickets {
     background-color: #08080B;
-    height: 450px;
+    height: 35vw;
 }
 
-.ticketsImg {
+.ticketsImg img {
     width: 25%;
     float: left;
     padding-top: 100px;
@@ -197,26 +224,23 @@ h3, h4 {
 
 .moreInfo {
     background-color: #3D0369;
-    height: 400px;
-    /* margin: 0 auto;
-    text-align: center; */
+    clear: both;
 }
 
 .floatWidth {
     width: 65%;
     margin: 0 auto;
+    padding: 130px 0;
 }
 
 .location li,
 .ticketsSale li,
 .reach li {
     list-style: none;
-    /* display: inline-block; */
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    /* padding-left: 28px; */
     padding-top: 15px;
 }
 
@@ -224,14 +248,12 @@ h3, h4 {
 .ticketsSale i,
 .reach i {
     font-size: 5rem;
-    padding-top: 130px;
 }
 
 .location,
 .ticketsSale,
 .reach {
     float: left;
-    /* margin: 0 auto; */
     width: 33%;
 }
 /*********************/
@@ -240,7 +262,8 @@ h3, h4 {
 
 .gram {
     background-color: #0F0632;
-    height: 600px;
+    padding-bottom: 60px;
+    clear: both;
 }
 
 .gram h3 {
@@ -249,17 +272,11 @@ h3, h4 {
     padding-bottom: 50px;
 }
 
-/* .middle {
-    padding: 0 40px;
-    object-fit: contain;
-} */
 
 .gram li {
     float: left;
     width: calc((100% - 60px) / 3);
-    /* width: 33%; */
     margin-right: 30px;
-    /* margin-bottom: 40px; */
 }
 
 .gram li:nth-of-type(3n) {
@@ -307,31 +324,23 @@ input {
     margin-top: 10px;
 }
 
-.cta {
-    font-size: 2rem;
-    padding: 10px 10px 15px 10px;
+button {
+    cursor: pointer;
+    border-style: none;
+	background-color: #9200FF;
+    color: #FFF;
+    font-family: 'Iceberg', cursive;
+    text-transform: uppercase;
+	font-size: 2.5rem;
+    padding: 6px 10px 15px 10px;
     margin-left: -5px;
-}
-/* button {
-	border-style: none;
-	background-color: #F6F7F9;
-	width: 100%;
-	font-size: 1.6rem;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
-	margin-top: 0.5rem;
-	margin-bottom: 3rem;
+
 }
 
-button:hover {
-	font-weight: 700;
-	color: #FFFFFF;
-}
-
+button:hover,
 button:focus {
-	font-weight: 700;
-	color: #FFFFFF;
-} */
+	font-weight: bold;
+}
 
 /*********************/
 /* footer styles */
@@ -359,3 +368,404 @@ footer {
 }
 
 
+/*******************************************************************************************/
+/* media query styles >> SMALL DESKTOP1 */
+/*******************************************************************************************/
+@media (max-width: 1180px) {
+	.wrapper {
+		width: 85%;
+    }
+
+/*********************/
+/* header styles */
+/*********************/
+
+    header {
+        height: 65vh;
+    }
+
+    h3 {
+        font-size: 4.6rem;
+    }
+
+/***********************************/
+/* performing & experiences styles */
+/***********************************/
+    .performingInfo,
+    .expInfo {
+        height: 45vw;
+        padding: 80px 70px;
+    }
+
+    .performingImg img,
+    .expImg img {
+    height: 45vw;
+    object-fit: cover;
+}
+
+/*********************/
+/* tickets styles */
+/*********************/
+.tickets {
+    height: 40vw;
+}
+/*******************************************************************************************/
+/* media query styles >> SMALL DESKTOP 2 */
+/*******************************************************************************************/
+@media (max-width: 1024px) {
+	.wrapper {
+		width: 85%;
+    }
+
+/***********************************/
+/* performing & experiences styles */
+/***********************************/
+    .performingInfo,
+    .expInfo {
+        height: 50vw;
+    }
+
+    .performingImg img,
+    .expImg img {
+    height: 50vw;
+}
+
+/*********************/
+/* tickets styles */
+/*********************/
+.tickets {
+    height: 45vw;
+}
+/*******************************************************************************************/
+/* media query styles >> TABLET 1 */
+/*******************************************************************************************/
+
+@media (max-width: 940px) {
+	.wrapper {
+		width: 85%;
+    }
+
+/***********************************/
+/* performing & experiences styles */
+/***********************************/
+    .performingInfo,
+    .expInfo {
+        height: auto;
+        width: 100%
+    }
+
+    .performingImg img,
+    .expImg img {
+    width: 100%;
+    height: 50vw;
+}
+
+/*********************/
+/* tickets styles */
+/*********************/
+.tickets {
+    height: auto;
+    padding-bottom: 80px;
+}
+
+
+.ticketsInfo {
+    width: 100%;
+    height: auto;
+
+}
+
+.ticketsImg img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    object-position: center -336px;
+    padding-top: 80px;
+}
+
+/*********************/
+/* more info styles */
+/*********************/
+.location,
+.ticketsSale,
+.reach {
+    width: 50%;
+}
+
+.moreInfo {
+    height: auto;
+}
+
+.floatWidth {
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.location,
+.ticketsSale,
+.reach {
+    width: 100%;
+}
+
+.location,
+.ticketsSale {
+    padding-bottom: 50px;
+}
+
+
+
+/*********************/
+/* gram styles */
+/*********************/
+.gram li {
+    width: calc((100% - 30px) / 2);
+}
+
+.gram li:nth-of-type(2n) {
+    margin-right: 0;
+}
+
+.hide {
+    display: none;
+}
+
+/*********************/
+/* contactInfo styles */
+/*********************/
+
+.contactInfo {
+    width: 100%;
+    float: none;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.updates {
+    width: 100%;
+    float: none;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+h4 {
+    padding-bottom: 10px;
+}
+
+/*******************************************************************************************/
+/* media query styles >> TABLET 2 */
+/*******************************************************************************************/
+
+@media (max-width: 768px) {
+	.wrapper {
+		width: 85%;
+    }
+
+/*********************/
+/* navigation styles */
+/*********************/
+    header .menuBar a {
+        display: none;
+    }
+
+    .menuBar i {
+        display: block;
+        font-size: 3rem;
+    }
+
+.social {
+    display: none;
+}
+
+/***********************************************************************************/
+
+@media (max-width: 600px) {
+	.wrapper {
+		width: 90%;
+    }
+
+/***********************************/
+/* performing & experiences styles */
+/***********************************/
+.performingInfo,
+.expInfo,
+.ticketsInfo {
+    text-align: center;
+}
+
+.performingInfo,
+.expInfo {
+    padding: 50px 40px;
+}
+
+.ticketsInfo {
+    padding-left: 10px;
+}
+
+h3, p {
+    text-align: left;
+}
+
+
+
+/*********************/
+/* ticket styles */
+/*********************/
+
+.ticketsImg img {
+    float: none;
+    height: 80vw;
+    object-position: center;
+}
+
+.ticketsInfo {
+    float: none;
+}
+
+
+.contactInfo p,
+.updates p {
+    text-align: center;
+}
+
+/*********************/
+/* gram styles */
+/*********************/
+
+.gram h3 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*********************/
+/* contact styles */
+/*********************/
+
+.contactInfo{
+    width: 100%;
+    float: none;
+    
+}
+
+.updates {
+    width: 100%;
+    float: none;
+}
+
+
+input,
+button {
+    display: block;
+    width: 100%;
+}
+
+input {
+    text-align: center;
+    margin-bottom: 8px;
+    margin-left: -5px;
+}
+
+/******************************************************************************************/
+
+@media (max-width: 420px) {
+	.wrapper {
+		width: 90%;
+    }
+
+/*********************/
+/* heading styles */
+/*********************/
+
+header{
+    height: 55vh;
+    background-size: cover;
+    background-position: 25%;
+
+}
+
+h1 {
+    font-size: 6rem; 
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3, h4 {
+    font-size: 3.5rem;
+}
+
+
+/*********************/
+/* tickets styles */
+/*********************/
+
+.ticketsImg img {
+    height: auto;
+    padding-top: 40px;
+}
+
+.ticketsInfo h3 {
+    padding-top: 40px;
+}
+
+.tickets {
+    padding-bottom: 60px;
+}
+
+.gram {
+    padding-bottom: 45px;
+}
+
+/*******************************************************************************************/
+/* media query styles >> MOBILE */
+/*******************************************************************************************/
+
+@media (max-width: 360px) {
+	.wrapper {
+		width: 90%;
+    }
+
+    
+    h1 {
+    font-size: 4rem; 
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+span {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+h3, h4 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.tickets img {
+    height: 80vw;
+}
+
+.menuBar a {
+    font-size: 1.5rem;
+}
+
+.read {
+    font-size: 2rem;
+}
+
+.location, 
+.ticketsSale {
+    padding-bottom: 20px;
+}
+
+.floatWidth {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
